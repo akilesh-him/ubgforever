@@ -17,8 +17,6 @@ wisp.options.allow_loopback_ips = false;
 wisp.options.allow_direct_ip = false;
 wisp.options.allow_udp_streams = false;
 wisp.options.dns_result_order = "ipv4first";
-wisp.options.stream_limit_per_host = 24;
-wisp.options.stream_limit_total = 256;
 
 const server = http.createServer((request, response) => {
 	const pathname = new URL(request.url ?? "/", "http://localhost").pathname;
