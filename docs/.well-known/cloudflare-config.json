@@ -1,0 +1,36 @@
+{
+  "scramjet": {
+    "enabled": true,
+    "proxy": {
+      "wisp": {
+        "url": "wss://ubgforever.pages.dev/wisp/",
+        "timeout": 30000,
+        "reconnect": true
+      },
+      "headers": {
+        "User-Agent": "Scramjet-Proxy/1.0",
+        "X-Proxy-By": "Cloudflare-Pages"
+      }
+    },
+    "cache": {
+      "ttl": 3600,
+      "strategies": ["static", "dynamic"]
+    },
+    "security": {
+      "cors": {
+        "allowedOrigins": [
+          "https://akilesh-him.github.io",
+          "https://ubgforever.pages.dev",
+          "https://ubgforever.example.com"
+        ],
+        "credentials": false
+      }
+    }
+  },
+  "pages": {
+    "buildCommand": "pnpm --dir scramjet --filter @mercuryworkshop/scramjet-demo build",
+    "outputDirectory": "docs",
+    "framework": "vite",
+    "compatibility_date": "2024-10-11"
+  }
+}
